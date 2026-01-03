@@ -1,0 +1,35 @@
+{
+  "headers": [
+    {
+      "source": "/api/imagem.png",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/png"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/imagem.png",
+      "destination": "/api/imagem.png"
+    },
+    {
+      "source": "/download/:slug.png",
+      "destination": "/api/imagem.png"
+    },
+    {
+      "source": "/assets/:file.png",
+      "destination": "/api/imagem.png"
+    }
+  ]
+}
